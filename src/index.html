@@ -1,0 +1,29 @@
+---
+title: "Mi Catálogo"
+layout: layouts/base.njk
+---
+
+<section class="product-grid">
+  {% for product in collections.products %}
+    <div class="product-card">
+      <a href="{{ product.url }}">
+        {% if product.data.images and product.data.images.length > 0 %}
+          {% if product.data.images[0].image %}
+            <img src="{{ product.data.images[0].image }}" alt="{{ product.data.images[0].alt | default: product.data.title }}">
+          {% else %}
+            <img src="{{ product.data.images[0] }}" alt="{{ product.data.title }}">
+          {% endif %}
+        {% elsif product.data.image %}
+          <img src="{{ product.data.image }}" alt="{{ product.data.title }}">
+        {% else %}
+          <img src="/assets/images/default.jpg" alt="{{ product.data.title }}">
+        {% endif %}
+        <h2>{{ product.data.title }}</h2>
+        <p class="price">{{ product.data.price }}</p>
+      </a>
+      <a class="btn-whatsapp" href="https://wa.me/16263941200?text=Hola, me interesa el producto: {{ product.data.title }}" target="_blank" rel="noopener">
+        Comprar por WhatsApp
+      </a>
+    </div>
+  {% endfor %}
+</section>
