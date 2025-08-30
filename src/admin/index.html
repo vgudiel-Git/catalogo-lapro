@@ -1,9 +1,59 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Administración de Contenido</title>
+  <title>Administración — Agencia LAPRO</title>
+  
+  <!-- Google Fonts - Brand Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    /* LAPRO Brand Identity for Admin */
+    :root {
+      --color-fondo: #0B1220;
+      --color-primario: #00E5FF;
+      --color-secundario: #00C4EE;
+      --color-azul-electrico: #3864A3;
+      --color-blanco: #FFFFFF;
+      --color-neutral: #DDE1E6;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--color-fondo);
+      color: var(--color-blanco);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    
+    /* Decap CMS Branding Override */
+    .nc-appHeader {
+      background: linear-gradient(135deg, var(--color-azul-electrico) 0%, var(--color-fondo) 100%) !important;
+      border-bottom: 1px solid rgba(0, 229, 255, 0.2) !important;
+    }
+    
+    .nc-appHeader-branding {
+      font-family: 'Poppins', sans-serif !important;
+      font-weight: 700 !important;
+      color: var(--color-primario) !important;
+    }
+    
+    .nc-button {
+      background: linear-gradient(135deg, var(--color-azul-electrico) 0%, var(--color-primario) 100%) !important;
+      border-radius: 12px !important;
+      font-weight: 600 !important;
+      font-family: 'Inter', sans-serif !important;
+    }
+    
+    .nc-button:hover {
+      background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%) !important;
+      transform: translateY(-2px) !important;
+    }
+  </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>

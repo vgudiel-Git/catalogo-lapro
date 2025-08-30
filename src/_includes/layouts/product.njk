@@ -26,19 +26,21 @@
     </div>
   {% endif %}
 
-  <h1 class="product-detail__title">{{ title }}</h1>
+  <header class="product-detail__header">
+    <h1 class="product-detail__title">{{ title }}</h1>
 
-  {% if price %}
-    <p class="product-detail__price">{{ price }}</p>
-  {% endif %}
+    {% if price %}
+      <p class="product-detail__price">${{ price }}</p>
+    {% endif %}
+  </header>
 
   <div class="product-detail__content">
     {{ content | safe }}
   </div>
 
-  <p>
+  <footer class="product-detail__footer">
     <a class="btn-whatsapp" href="https://wa.me/16263941200?text=Hola, me interesa el producto: {{ title }}" target="_blank" rel="noopener">
       Comprar por WhatsApp
     </a>
-  </p>
+  </footer>
 </article>

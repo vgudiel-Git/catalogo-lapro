@@ -3,13 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
+  <title>{{ title }} — Agencia LAPRO</title>
+  
+  <!-- Google Fonts - Brand Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
   <header>
     <div class="header-inner">
-      <h1><a href="/">Mi Catálogo</a></h1>
+      <h1>
+        <a href="/" class="logo-link">
+          <img src="/assets/images/logo.png" alt="Agencia LAPRO" class="logo" width="120" height="40">
+          <span class="logo-text">Agencia LAPRO</span>
+        </a>
+      </h1>
       <nav>
         <ul class="main-menu">
           <li><a href="/" class="{% if page.url == '/' %}active{% endif %}">Inicio</a></li>
@@ -35,7 +46,7 @@
   </main>
 
   <footer>
-    <p>&copy; <script>document.write(new Date().getFullYear())</script> Mi Catálogo</p>
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> Agencia LAPRO</p>
   </footer>
 
   <!-- Script de Netlify Identity para redirección -->
