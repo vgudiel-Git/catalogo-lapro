@@ -359,6 +359,10 @@ footer {
 .product-detail__footer {
   text-align: center;
   margin-top: 2rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 /* Product Gallery */
