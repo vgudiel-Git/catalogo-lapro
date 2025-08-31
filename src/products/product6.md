@@ -8,7 +8,7 @@ images:
   - "/assets/images/product5.jpg"
   - "/assets/images/product1.jpg"
   - "/assets/images/product2.jpg"
-price: "$849.99"
+price: "849.99"
 permalink: "/products/product6/"
 ---
 
