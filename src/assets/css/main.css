@@ -356,6 +356,11 @@ footer {
   padding: 2rem 0;
 }
 
+.product-detail__footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 /* Product Gallery */
 .product-gallery {
   display: grid;
@@ -558,6 +563,8 @@ footer {
     font-size: 1rem;
     width: 100%;
     max-width: 300px;
+    margin: 1rem auto;
+    display: block;
   }
   
   /* Mobile gallery layout */
@@ -599,6 +606,9 @@ footer {
   .btn-whatsapp {
     padding: 0.875rem 1.25rem;
     font-size: 0.9rem;
+    margin: 1rem auto;
+    display: block;
+    text-align: center;
   }
 }
 
