@@ -24,7 +24,7 @@
       <nav>
         <ul class="main-menu">
           <li class="dropdown">
-            <a href="#" class="hamburger-menu">
+            <a href="#" class="hamburger-menu" id="hamburger-menu">
               <span class="hamburger-icon">
                 <span></span>
                 <span></span>
@@ -32,7 +32,7 @@
               </span>
               <span class="menu-text">Productos</span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" id="dropdown-menu">
               {% for product in collections.products %}
                 <li>
                   <a href="{{ product.url }}" class="{% if page.url == product.url %}active{% endif %}">
@@ -67,6 +67,48 @@
         }
       });
     }
+  </script>
+
+  <!-- Hamburger Menu JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+      let isOpen = false;
+
+      // Toggle menu on click
+      hamburgerMenu.addEventListener('click', function(e) {
+        e.preventDefault();
+        isOpen = !isOpen;
+        
+        if (isOpen) {
+          dropdownMenu.style.display = 'block';
+          hamburgerMenu.classList.add('active');
+        } else {
+          dropdownMenu.style.display = 'none';
+          hamburgerMenu.classList.remove('active');
+        }
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!hamburgerMenu.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          isOpen = false;
+          dropdownMenu.style.display = 'none';
+          hamburgerMenu.classList.remove('active');
+        }
+      });
+
+      // Close menu when clicking on a menu item
+      const menuItems = dropdownMenu.querySelectorAll('a');
+      menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+          isOpen = false;
+          dropdownMenu.style.display = 'none';
+          hamburgerMenu.classList.remove('active');
+        });
+      });
+    });
   </script>
 </body>
 </html>

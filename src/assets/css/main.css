@@ -264,13 +264,22 @@ nav a {
   transition: all 0.3s ease;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
+/* Desktop hover behavior */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
 
 .dropdown-menu li a:hover {
   background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
   color: var(--color-fondo);
+}
+
+/* Active state for hamburger menu */
+.hamburger-menu.active {
+  background: rgba(0, 229, 255, 0.3);
+  border-color: rgba(0, 229, 255, 0.6);
 }
 
 @media (max-width: 768px) {
@@ -658,6 +667,7 @@ footer {
     box-shadow: var(--shadow-medium);
     border: 1px solid rgba(0, 229, 255, 0.3);
     margin-top: 0.5rem;
+    width: 100%;
   }
 
   /* Main content responsive */
