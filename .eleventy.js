@@ -17,6 +17,13 @@ module.exports = function(eleventyConfig) {
         return `/products/${data.page.fileSlug}/index.html`;
       }
       return data.permalink; // fallback to front matter or default
+    },
+    layout: data => {
+      // Automatically apply product layout to all markdown files in products folder
+      if (data.page && data.page.inputPath && data.page.inputPath.includes("/products/")) {
+        return "layouts/product.njk";
+      }
+      return data.layout; // fallback to front matter or default
     }
   });
 

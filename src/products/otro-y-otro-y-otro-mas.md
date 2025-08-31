@@ -4,6 +4,5 @@ price: 553
 images:
   - image: /assets/images/pexels-fauxels-3183150.jpg
     alt: yupi
-layout: layouts/product.njk
 ---
 suerte
