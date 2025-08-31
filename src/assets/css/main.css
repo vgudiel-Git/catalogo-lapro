@@ -486,6 +486,7 @@ footer {
   color: var(--color-neutral);
   font-family: var(--font-family-body);
   font-weight: 400;
+  text-align: center;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
